@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
 test added lines
+test added lines2
 <IncludeFile>papastats.2.17.xml</IncludeFile>
       <!--The following configuration clauses are common to all Liffeconnect feed handlers. See the Administrators Guide for more information:  http://wombatconsulting.com/feedhandlers/admin-guide.html-->
    <IncludeFile>tdex_tport.xml</IncludeFile>
