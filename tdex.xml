@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
+   <IncludeFile>papastats.2.17.xml</IncludeFile>
+      <!--The following configuration clauses are common to all Liffeconnect feed handlers. See the Administrators Guide for more information:  http://wombatconsulting.com/feedhandlers/admin-guide.html-->
+   <IncludeFile>tdex_tport.xml</IncludeFile>
+   <IncludeFile>tdex_hosts.xml</IncludeFile>
+
+   <Parameter>
+      <Name>MamaSubscExpire</Name>
+      <Value>0.0</Value>
+   </Parameter>
+
+   <Parameter>
+      <Name>MamaDataDictResponder</Name>
+      <Value>false</Value>
+   </Parameter>
+
+   <Parameter>
+      <Name>WmwSource</Name>
+      <Value>TDEX</Value>
+   </Parameter>
+
+      <Parameter>
+         <Name>SymbolAnnounceSymbolFormat</Name>
+         <Value>_ANNOUNCE</Value>
+      </Parameter>
+
+   <Parameter>
+      <Name>LiffeConnectEnableInternalHeartbeat</Name>
+      <Value>true</Value>
+   </Parameter>
+ 
+   <Parameter>
+      <Name>StatsResetTime</Name>
+      <Value>00:00:00.00 Asia/Tokyo</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>MaxOrderBookSize</Name>
+      <Value>30</Value>
+   </Parameter>
+
+   <Parameter>
+      <Name>LiffeConnectStoreMessagesForMissingStrategy</Name>
+      <Value>true</Value>
+   </Parameter>
+
+   <Parameter>
+      <Name>LiffeConnectAddAllContracts</Name>
+      <Value>true</Value>
+   </Parameter>
+
+   <Parameter>
+      <Name>OrdersPerRecord</Name>
+      <Value>30</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectLogonIfNoStrategies</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUseLineTimeForBookTime</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectClearCacheOnLogon</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>PublishCalculatedImpliedInAsQuote</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUseInternalQueue</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUseTimedInitialization</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUseInternalSequenceNumber</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>CalculateImpliedInPrice</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>ExplicitNoPriceValue</Name>
+      <Value>999999999</Value>
+      <Comment>For some feeds, the feed itself transmits a specific value to indicate that a given quote no longer has a price. The above value is the default value sent from the exchange. Change this parameter to use a different value.</Comment>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectPublishSyntheticTrades</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectPublishSyntheticTradeSaleCondition</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>StrategyPublishNumberOfLegs</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>SupportedStrategyTypes</Name>
+      <Value>CalendarSpread</Value>
+      <Value>Butterfly</Value>
+      <Value>Condor</Value>
+      <Value>Spread</Value>
+      <Value>Ladder</Value>
+      <Value>2x1RatioSpread</Value>
+      <Value>Strangle</Value>
+      <Value>Straddle</Value>
+      <Value>Strip</Value>
+      <Value>Pack</Value>
+      <Value>Bundle</Value>
+      <Value>DiagonalCalendarSpread</Value>
+      <Comment>List of strategy types that will be handled by the RecordHandlerStrategy module.</Comment>
+   </Parameter>
+    
+   <Parameter>
+      <Name>ImpliedPricingIgnoredInstrumentTypes</Name>
+      <Value>Future</Value>
+      <Comment>List of instrument types that do not support implied price matching.</Comment>
+   </Parameter>
+    
+   <Parameter>
+      <Name>PublishStrategyTypeUsingRecordHandlerStrategy</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>StrategyCheckModifiedBeforeUpdateBestPrices</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>PublishImmediateStrategyLegUpdate</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>RecordPublisherUseSentinel</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>PublishGroupRecords</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>GenerateGroupSymbol</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>RecordHandlerOrderBookEnableGroups</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>UseLineFilter</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>OrderBookUpdateImpliesNormalStatus</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>UseRawOrderBookClear</Name>
+      <Value>false</Value>
+      <Comment>Set to true to enable clearOrderBook and clearAllOrderBooks WAM commands for tdex</Comment>
+   </Parameter>
+    
+   <Parameter>
+      <Name>MdrvPrefix</Name>
+      <Value>TDEX</Value>
+      <Comment>MDRV publishing interface</Comment>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectPubSecStatusEnum</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectFilterOnExchangeName</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectExchangeName</Name>
+      <Value>TDEX</Value>
+      <Comment>Not required in LiffeConnectFilterOnExchangeName is set to 'false'</Comment>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectExchangeCodes</Name>
+      <Value>E</Value>
+      <Value>F</Value>
+      <Value>G</Value>
+      <Value>I</Value>
+      <Value>J</Value>
+      <Value>S</Value>
+      <Value>T</Value>
+      <Comment>
+          "E" - TSE Equity Options
+          "F" - TSE TOPIX Futures
+          "G" - TSE JGB Futures
+          "I" - TSE TOPIX Indexes
+          "J" - TSE JGB Options
+          "S" - TSE Equities
+          "T" - TSE TOPIX Options
+     </Comment>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUseExchangeCodeProductMappings</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectEquityOptionsExchangeCode</Name>
+      <Value>E</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeconnectStrategyExchangeCode</Name>
+      <Value>$</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUseLegCommodityCodeForStrategy</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>OptionPublishSymbology</Name>
+      <Value>Native</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>FuturePublishSymbology</Name>
+      <Value>Native</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>StrategyPublishSymbology</Name>
+      <Value>Native</Value>
+   </Parameter>
+    
+   <!--Parameter>
+      <Name>FuturePublishSymbologyFormat</Name>
+      <Value>%u%m%y</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>OptionPublishSymbologyFormat</Name>
+      <Value>%u%p%y%S</Value>
+   </Parameter-->
+    
+   <Parameter>
+      <Name>ExtraInfoPublishSymbologySeparator</Name>
+      <Comment>No value</Comment>
+      <Value/>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUseGlobalGroupSymbolForEquities</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectEquitiesGlobalGroupSymbol</Name>
+      <Value>EquitiesGroup</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUseGlobalGroupSymbolForIndex</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectIndexGlobalGroupSymbol</Name>
+      <Value>IndexGroup</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectTrimSpacesInAmrCode</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectUs</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectPublishGroupChains</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>PublishLinkRecords</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>RecordHandlerLinkNew</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>TradeCalculateVwap</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>SslSourceName</Name>
+      <Value>TDEX</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>SslPublisherType</Name>
+      <Value>broadcast</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>RecordAttrs</Name>
+      <Value>RecordAttrsNormal</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>TdexAutomaticRollBeforeEveningSession</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>OrderBookData</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>DefaultTimeZone</Name>
+      <Value>Asia/Tokyo</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>NativeTimeZone</Name>
+      <Value>Asia/Tokyo</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>PublishTopOfBook</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>CalculateTopOfBook</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>TopOfBookDecimals</Name>
+      <Value>4</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>PublishFullOrderBook</Name>
+      <Value>false</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>InitialMode</Name>
+      <Value>Sleep</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LineDataFormat</Name>
+      <Value>basic</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>MessageRecoveryFile</Name>
+      <Value/>
+   </Parameter>
+    
+   <Parameter>
+      <Name>PublishAllRate</Name>
+      <Value>1000</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectConvertTickPrice</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectApplyStrategyPriceDenominator</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>RecordPublisherDelayInitialize</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeConnectHandleOutOfSyncStrategySecStatus</Name>
+      <Value>true</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>LiffeChainProductName</Name>
+      <Value>TdexProduct</Value>
+   </Parameter>
+    
+   <Parameter>
+      <Name>FieldAttrs</Name>
+      <Value>FieldAttrsCommon</Value>
+      <Value>FieldAttrsOption</Value>
+      <Value>FieldAttrsFuture</Value>
+      <Value>FieldAttrsQuote</Value>
+      <Value>FieldAttrsChain</Value>
+      <Value>FieldAttrsTrade</Value>
+      <Value>FieldAttrsOrderBookMsg</Value>
+      <Value>FieldAttrsOrderBookWombatMsg</Value>
+      <Value>FieldAttrsOrderListPart</Value>
+      <Value>FieldAttrsFundamental</Value>
+      <Value>FieldAttrsSecurityStatus</Value>
+      <Value>FieldAttrsStatus</Value>
+      <Value>FieldAttrsReuters</Value>
+      <Value>FieldAttrsIce</Value>
+      <Value>FieldAttrsItc</Value>
+      <Value>FieldAttrsStrategy</Value>
+      <Value>FieldAttrsTradeOptional</Value>
+      <Value>FieldAttrsCorpAct</Value>
+   </Parameter>
+    
+   <Feed>
+      <Name>tdex</Name>
+      <Parameter>
+         <Name>NamedThreads</Name>
+         <Value>thread_liffeconnect</Value>
+         <Value>thread_poll_liffeconnect</Value>
+         <Comment>thread_poll_liffeconnect required for internal queue</Comment>
+      </Parameter>
+      <Parameter>
+         <Name>UseNamedThread</Name>
+         <Value>thread_liffeconnect</Value>
+         <Value>thread_poll_liffeconnect</Value>
+      </Parameter>
+   </Feed>
+    
+   <Thread>
+      <Name>thread_liffeconnect</Name>
+      <Parameter>
+         <Name>Enabled</Name>
+         <Value>true</Value>
+      </Parameter>
+      <Parameter>
+         <Name>IsMsgHandling</Name>
+         <Value>false</Value>
+      </Parameter>
+      <Parameter>
+         <Name>IsMsgSending</Name>
+         <Value>true</Value>
+      </Parameter>
+      <Parameter>
+         <Name>IsSessionThread</Name>
+         <Value>true</Value>
+      </Parameter>
+   </Thread>
+    
+   <Thread>
+      <Name>thread_poll_liffeconnect</Name>
+      <Parameter>
+         <Name>Enabled</Name>
+         <Value>true</Value>
+      </Parameter>
+      <Parameter>
+         <Name>IsCreated</Name>
+         <Value>true</Value>
+      </Parameter>
+      <Parameter>
+         <Name>IsMsgHandling</Name>
+         <Value>false</Value>
+      </Parameter>
+      <Parameter>
+         <Name>IsMsgSending</Name>
+         <Value>true</Value>
+      </Parameter>
+      <Parameter>
+         <Name>IsSessionThread</Name>
+         <Value>false</Value>
+      </Parameter>
+   </Thread>
+   <IncludeFile>liffe_tdex_product_mappings.xml</IncludeFile>
+   <IncludeFile>tdex_sess3_field_clear.xml</IncludeFile>
+   <IncludeFile>tdex_sec_status_mapping.xml</IncludeFile>
+   <IncludeFile>tdex_trade_condition_mapping.xml</IncludeFile>
+   <IncludeFile>tdex_trade_exec_venue_mapping.xml</IncludeFile>
+   <IncludeFile>tdex_tse_symbol_manager_product_map.xml</IncludeFile>
+   <IncludeFile>productdefs_superfeedtokyo.xml</IncludeFile>
+   <IncludeFile>WOMBAT_FieldAttrs.xml</IncludeFile>
+   <IncludeFile>WOMBAT_RecordAttrs.xml</IncludeFile>
+</config>
