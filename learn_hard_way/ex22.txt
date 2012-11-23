@@ -1,0 +1,26 @@
+" --> double quote used to designate the beginning and end of string   
+' --> single quote used to designate the beginning and end of strind
+# Pound or hash used in designate comment 
++ plus sign used to add number or join strings
+/ forward slash ... divide numbers
+< less then ... used to compare two values
+> greater then ... used to compare two values
+% modulus ... returns the remainder of the disvision of two number
+- minus sign ... used to subtract to values 
+<= less than or equal to ... used to compare two values 
+>= greater than or equal to ... used to compare two values 
+, comma ... used to separate strings in print statements
+= equal sign used to assign a value to variable 
+== double equal sign ... used to compare two values
+_  underscore ... used to separate part of a variable name
+*  star ... used for multiplication or to print multiply copies of string
+%d format character ... designates a decimal to be supplied
+%s format character ... designates a string to be supplied
+%r format character .... designates anything can be supplied
+%f format character ... designates floating point  to be supplied
+() Parentheses ... used to designate a tuple or function agruments
+\n escaped character ... designates a newline
+\t escaped character ... designates a tab
+\\ escaped character ... designates printing a backslash
+.  period ... seperator between function and method ...
+
